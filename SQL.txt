@@ -1,0 +1,66 @@
+
+¬ывести всех клиентов в таблице из таблицы Customers 
+SELECT * FROM Customer WHERE DISTINCT CustomerID;
+
+¬ывести только Id клиентов из таблицы Customers
+SELECT CustomerID FROM Customers;
+
+¬ывести контактные имена и телефоны поставщиков из таблицы Suppliers
+SELECT ContactName, Phone FROM Suppliers;
+
+¬ывести только страны поставщиков из таблицы Suppliers
+SELECT Country FROM Suppliers;
+
+¬ывести им€ и почтовый код поставщиков из таблицы Suppliers
+SELECT SupplierName, PostalCode FROM Suppliers;
+
+¬ывести им€, фамилию и дни рождени€ сотрудников из таблицы Employees
+SELECT LastName, FirstName, BirthDate FROM Employees;
+
+¬ывести клиентов, где в имени есть "Que" из таблицы Customers
+SELECT * FROM Customers WHERE LastName LIKE "%Que%";
+
+¬ывести клиентов, где в имени в конце есть "en" из таблицы Customers
+SELECT * FROM Customers WHERE LastName LIKE "%en";
+
+¬ывести клиентов, где в имени есть буква "w" из таблицы Customers
+SELECT * FROM Customers WHERE LastName LIKE "%w%";
+
+¬ывести заказы, которые были сделаны 1996-12-12 из таблицы Orders
+SELECT * FROM Orders WHERE OrderDate=1996-12-12;
+
+¬ывести клиента, у которого id равен 87 из таблицы Customers
+SELECT * FROM Customers WHERE CustomerID=87;
+
+¬ывести клиента, у которого id равен 78 из таблицы Customers
+SELECT * FROM Customers WHERE CustomerID=78;
+
+¬ывести клиентов, у которых id больше 80 из таблицы Customers
+SELECT * FROM Customers WHERE CustomerID>80;
+
+¬ывести клиентов, у которых id меньше 80 из таблицы Customers
+SELECT * FROM Customers WHERE CustomerID<80;
+
+¬ывести клиентов, у которых id меньше 20 или больше 70 из таблицы Customers
+SELECT * FROM Customers WHERE CustomerID<20 or CustomerID>70;
+
+¬ывести клиентов, у которых id меньше либо равно 25 из таблицы Customers
+SELECT * FROM Customers WHERE CustomerID<=25;
+
+¬ывести клиентов, у которых id больше либо равно 45 из таблицы Customers
+SELECT * FROM Customers WHERE CustomerID>=45;
+
+¬ывести клиентов, у которых id больше 70, но меньше 90 из таблицы Customers
+SELECT * FROM Customers WHERE CustomerID>70 AND CustomerID<90;
+
+¬ывести клиентов, у которых id между 60 и 91 из таблицы Customers
+SELECT * FROM Customers WHERE CustomersID BETWEEN 60 AND 91;
+
+¬ывести минимальный id из таблицы Customers
+SELECT MIN(CustomersID) as min FROM Customers
+
+¬ывести максимальный id из таблицы Customers
+SELECT MAX(CustomersID) as max FROM Customers
+
+¬ывести количество клиентов из таблицы Customers
+SELECT COUNT(DISTINCT CustomersID) FROM Customers;
